@@ -24,13 +24,11 @@ You will be assessed on:
 
 - Child and Infant tickets cannot be purchased without purchasing an Adult ticket.
 
-|   Ticket Type    |     Price   |
-
-|    INFANT        |    £0       |
-
-|    CHILD         |    £15     |
-
-|    ADULT         |    £25      |
+|   Ticket Type   |   Price   |
+|-----------------|-----------|
+|    ADULT        |    £25    |
+|    CHILD        |    £15    |
+|    INFANT       |    £0     |
 
 - There is an existing `TicketPaymentService` responsible for taking payments.
 
@@ -76,6 +74,7 @@ Provide a working implementation of a `TicketService` that:
 ## Dependencies
 - Node.js
 - Jest
+- Express
 
 # Run application
 ```
