@@ -1,5 +1,3 @@
-Instructions:
-
 # Objective
 
 This is a coding exercise which will allow you to demonstrate how you code and your approach to a given problem.
@@ -27,8 +25,6 @@ You will be assessed on:
 - Child and Infant tickets cannot be purchased without purchasing an Adult ticket.
 
 |   Ticket Type    |     Price   |
-
-| ---------------- | ----------- |
 
 |    INFANT        |    £0       |
 
@@ -81,7 +77,7 @@ Provide a working implementation of a `TicketService` that:
 - Node.js
 - Jest
 
-## Run application
+# Run application
 ```
 $ git clone https://github.com/ScottDormand96/cinema-tickets.git
 $ npm install
@@ -89,7 +85,7 @@ $ npm start
 ```
 
 ## Success
-
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -100,10 +96,12 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 1 }
   ]
 }'
+```
 
 ## Failures
 
 Invalid account ID
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -114,8 +112,10 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 1 }
   ]
 }'
+```
 
 Unknown ticket type
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -126,8 +126,10 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 1 }
   ]
 }'
+```
 
 Cannot purchase Child tickets without Adult tickets
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -138,8 +140,10 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 0 }
   ]
 }'
+```
 
 Cannot purchase Infant tickets without Adult tickets
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -150,9 +154,10 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 1 }
   ]
 }'
-
+```
 
 Cannot purchase more than 25 tickets excluding infants
+```
 curl -X POST http://localhost:5000/purchase-tickets \
 -H "Content-Type: application/json" \
 -d '{
@@ -163,7 +168,7 @@ curl -X POST http://localhost:5000/purchase-tickets \
     { "type": "INFANT", "quantity": 1 }
   ]
 }'
-
+```
 
 ## Tests
 ```
