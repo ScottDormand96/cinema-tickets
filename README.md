@@ -26,8 +26,6 @@ You will be assessed on:
 
 |   Ticket Type    |     Price   |
 
-| ---------------- | ----------- |
-
 |    INFANT        |    £0       |
 
 |    CHILD         |    £15     |
