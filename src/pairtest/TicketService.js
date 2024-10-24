@@ -6,8 +6,8 @@ import TicketTypeRequest from './lib/TicketTypeRequest.js'
 
 export default class TicketService {
   constructor() {
-    this.ticketPaymentService = new TicketPaymentService();
-    this.seatReservationService = new SeatReservationService();
+    this.ticketPaymentService = new TicketPaymentService()
+    this.seatReservationService = new SeatReservationService()
   }
 
   /**
